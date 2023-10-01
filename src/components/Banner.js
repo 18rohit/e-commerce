@@ -10,15 +10,27 @@ function Banner() {
     const [bannerPhoto,setBannerPhoto] = useState("https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg");
     const [idx,setIdx] = useState(1);
 
-    useEffect(()=>{
-        function updateBanner(){
-            if(idx===7) setIdx(0); 
-            else setIdx(idx+1);
-            console.log(idx);
+    // useEffect(()=>{
+    //     function updateBanner(){
+    //         if(idx===7) setIdx(0); 
+    //         else setIdx(idx+1);
+    //         console.log(idx);
+    //     }
+    //     const interval = setInterval(updateBanner,5000);
+    //     return ()=>clearInterval(interval);
+    // },[])
+
+    useEffect(() => {
+        let i=0;
+      
+        function updateBanner() {
+          i++;
+          setIdx(i%8);
         }
-        const interval = setInterval(updateBanner,5000);
-        return ()=>clearInterval(interval);
-    },[])
+        
+        const interval = setInterval(updateBanner, 3000);
+        return () => clearInterval(interval);
+      }, [])
 
     useEffect(()=>{
         axios.get('https://fakestoreapi.com/products?limit=8').then(response => {
