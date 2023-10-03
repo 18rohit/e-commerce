@@ -2,7 +2,7 @@ import '../styles/card.css'
 
 function Card(props){
     return (
-        <div className="card">
+        <div className="card border-4 border-double border-[#3b3b4b]">
             <div className="card-photo"><img className="card-image" src={props.image} alt="card" /></div>
             <div className="card-details">
                 <div className="card-title">{props.title}</div>
