@@ -11,7 +11,7 @@ import original from 'public/original.png';
 
 function Footer(){
     return(
-        <div className='bg-[#FAFBFC] font-sans antialiased text-[14px]'>
+        <div className=' font-sans antialiased text-[14px]'>
             <div className='mx-[20%] flex pt-[40px]'>
             <div className='basis-1/6 flex-row'>
                 <div>

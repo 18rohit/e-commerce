@@ -15,6 +15,7 @@ function AllProducts(){
     return (
         <div className="container" >
             {allProducts.map(prod=>{
+                if(prod.title.length>=30) prod.title = prod.title.slice(0,25)+'...'
                 return <Card key={prod.id} image={prod.image} title={prod.title} price={prod.price} />
             })}
         </div>

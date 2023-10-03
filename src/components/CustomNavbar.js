@@ -5,7 +5,7 @@ import logo from 'public/logo.svg'
 
 const CustomNavbar = () => {
     return (
-        <div className='flex h-[80px] bg-white' fixed>
+        <div className='flex h-[80px]' fixed>
             <div className='w-[10%] flex justify-center items-center'>
                 <Image src={logo}
                 height={40}/>

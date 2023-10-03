@@ -10,6 +10,7 @@ h2{
     overflow: hidden;
     margin: 10px;
     justify-content: space-evenly;
+    margin-bottom: 50px;
 }
 
 .category-card{
@@ -24,6 +25,7 @@ h2{
 }
 
 .category-card-details{
+    margin-bottom: 50px;
     text-align: center;
     font-weight: 600;
     font-size: 1.5rem;

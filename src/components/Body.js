@@ -9,7 +9,7 @@ import download from 'public/download.jpg'
 
 function Body() {
     return (
-        <div className="bg-[#f7f7f7]">
+        <div>
             <Image src={download} className="py-6"/>
             <Banner />
             <TodayDeal />

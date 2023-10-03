@@ -1,4 +1,6 @@
 import HomePage from '@/components/HomePage'
+import CustomNavbar from '@/components/CustomNavbar'
+import Footer from '@/components/Footer'
 import Image from 'next/image'
 
 export default function Home() {
@@ -109,7 +111,9 @@ export default function Home() {
           </p>
         </a>
       </div> */}
+      <CustomNavbar />
       <HomePage />
+      <Footer />
     </main>
   )
 }
