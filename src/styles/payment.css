@@ -1,0 +1,130 @@
+.main {
+  background-color: azure;
+  padding: 3em;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+/* .formSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cartSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
+.creditCard {
+  display: grid;
+  gap: 1em;
+  grid-template-areas:
+    "a a"
+    "b b"
+    "c d";
+}
+
+fieldset {
+  margin-bottom: 2em;
+}
+
+.field {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.formGroup1 {
+  grid-area: a;
+}
+.formGroup2 {
+  grid-area: b;
+}
+.formGroup3 {
+  grid-area: c;
+}
+.formGroup4 {
+  grid-area: d;
+}
+
+input,
+label {
+  transition: all 0.4s;
+  touch-action: manipulation;
+}
+
+label {
+  font-size: 0.9em;
+  color: rgb(100, 101, 101);
+}
+
+input[type="radio"] + label {
+  font-size: 1.1em;
+  color: rgb(36, 36, 36);
+  padding-left: 0.5em;
+}
+
+#cardNumber,
+#cardName,
+#expiry,
+#upiid,
+#cvv {
+  width: 90%;
+  line-height: 2;
+  font-size: 1.1em;
+  color: black;
+}
+
+#expiry,
+#cvv {
+  width: 80%;
+}
+
+input:placeholder-shown + label {
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: text;
+  text-overflow: ellipsis;
+  transform-origin: 0 0;
+  transform: translate(0.2em, 2em) scale(1.1);
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+}
+
+button.submit {
+  background-color: black;
+  color: azure;
+  border-radius: 0.6em;
+  display: block;
+  margin: auto;
+  line-height: 2;
+  font-size: 1.1em;
+  padding: 0.5em;
+  width: 40%;
+}
+
+.cartSection h2 {
+  color: black;
+  font-size: 1.3em;
+  font-weight: 600;
+  text-align: center;
+  margin: 1em;
+}
+
+.total {
+  display: flex;
+  color: black;
+  justify-content: space-around;
+  background-color: white;
+  height: 2em;
+}

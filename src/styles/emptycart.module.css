@@ -1,0 +1,19 @@
+.main {
+  min-height: 50vh;
+  width: 80%;
+  margin: auto;
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty {
+  font-size: 1.5em;
+}
+
+.products {
+  font-size: 1em;
+}

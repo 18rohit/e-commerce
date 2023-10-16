@@ -1,0 +1,21 @@
+.miniCard {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  margin: 0.5em;
+  gap: 1em;
+}
+
+.imageContainer {
+  width: 30%;
+  height: 120px;
+  position: relative;
+  margin: 0.8em;
+}
+
+.price,
+.category,
+.title {
+  color: black;
+}
