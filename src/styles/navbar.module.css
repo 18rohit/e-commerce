@@ -40,6 +40,19 @@
   align-items: center;
 }
 
+.itemCount {
+  position: absolute;
+  font-size: 0.9em;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  width: 1.2em;
+  height: 1.2em;
+  text-align: center;
+  padding-bottom: 18px;
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 1500px) {
   .category {
     padding: 1.5em;

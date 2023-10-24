@@ -11,9 +11,18 @@ import { addItem } from "@/app/cart/cartSlice";
 import { addToWishlist } from "../../wishlist/wishlistSlice";
 import Footer from "@/components/Footer";
 import CustomNavbar from "@/components/CustomNavbar";
+import swal from "sweetalert";
 
 function Detail({ params }) {
   const dispatch = useDispatch();
+
+  const addItemToCart = async () => {
+    const res = await fetch("http://localhost:3000/api/cart", {
+      method: "POST",
+      body: JSON.stringify(product),
+    });
+    swal("Added!", "Item has been added to the cart", "success");
+  };
 
   const [product, setProduct] = useState({
     image: "",
@@ -54,7 +63,8 @@ function Detail({ params }) {
             </button>
             <button
               className={styles.addToCart}
-              onClick={() => dispatch(addItem(product))}
+              // onClick={() => dispatch(addItem(product))}
+              onClick={addItemToCart}
             >
               Add to cart
             </button>

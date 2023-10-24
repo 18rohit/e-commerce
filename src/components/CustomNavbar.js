@@ -4,8 +4,28 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "public/logo.svg";
 import styles from "../styles/navbar.module.css";
+import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
 
 const CustomNavbar = () => {
+  // const list = useSelector((state) => state.cart);
+
+  const [list, setList] = useState([]);
+  const [count, setCount] = useState(0);
+
+  const fetchData = async () => {
+    const res = await fetch("http://localhost:3000/api/cart");
+    const ls = await res.json();
+    setCount(ls.data.length);
+    setList(ls.data);
+  };
+
+  useEffect(() => {
+    fetchData();
+    const interval = setInterval(fetchData, 15000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
@@ -116,9 +136,10 @@ const CustomNavbar = () => {
             </div>
           </div>
         </Link>
-        <Link href="/cart">
-          <div className="cart flex flex-col px-[12px] justify-center">
-            <div className="flex justify-center">
+        <Link href="/cart" rel="noopener noreferrer" target="_blank">
+          <div className="cart flex flex-col px-[12px] justify-center ">
+            <div className="flex justify-center relative ">
+              <div className={styles.itemCount}>{count}</div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

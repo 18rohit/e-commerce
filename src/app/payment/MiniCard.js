@@ -14,7 +14,9 @@ function MiniCard(props) {
       </div>
       <div className={styles.details}>
         <p className={styles.category}>{props.item.category}</p>
-        <p className={styles.title}>{props.item.title.slice(0, 15) + "..."}</p>
+        <p className={styles.title}>
+          {props.item.title && props.item.title.slice(0, 25) + "..."}
+        </p>
         <p className={styles.price}>Price: ${props.item.price}</p>
       </div>
     </div>

@@ -30,7 +30,7 @@ function TopPicks() {
       >
         {todaysItem.map((prod) => {
           if (prod.title.length >= 40)
-            prod.title = prod.title.slice(0, 25) + "...";
+            prod.title = prod.title.slice(0, 15) + "...";
           return (
             <Card
               key={prod.title}

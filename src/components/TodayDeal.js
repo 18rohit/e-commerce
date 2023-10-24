@@ -21,7 +21,7 @@ function TodayDeal() {
       <div className={styles.todaydeal}>
         {todaysItem.map((prod) => {
           if (prod.title.length >= 30)
-            prod.title = prod.title.slice(0, 25) + "...";
+            prod.title = prod.title.slice(0, 15) + "...";
           return (
             <Card
               key={prod.title}
